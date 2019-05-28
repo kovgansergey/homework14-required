@@ -14,6 +14,30 @@ body {
   background-color: #ffd200;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 567px) and (max-width: 767px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (max-width: 566px) {
+  .container {
+    max-width: 280px;
+  }
+}
+
 .navbar-wrap {
   display: flex;
   justify-content: space-between;
@@ -49,6 +73,21 @@ body {
   padding: 18px 30px;
   font-size: 13px;
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .navbar-wrap {
+    padding: 17px 0;
+  }
+  .navbar__contacts {
+    display: none;
+  }
+  .navbar__button {
+    margin: 0;
+    padding: 15px 26px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
 }
 
 .header {
@@ -111,44 +150,50 @@ body {
 }
 
 .header-img {
+  max-width: 570px;
+  width: 50%;
+}
+
+.header-img img {
+  width: 100%;
   box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    width: 960px;
+@media (max-width: 991px) {
+  .header-wrap {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .container {
-    width: 720px;
+@media (max-width: 767px) {
+  .header {
+    padding-top: 37px;
   }
-}
-
-@media (min-width: 567px) and (max-width: 767px) {
-  .container {
-    width: 540px;
+  .header-description__title {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 1.3;
   }
-  .navbar__contacts {
-    display: none;
+  .header-description__subtitle {
+    font-size: 16px;
   }
-}
-
-@media (max-width: 566px) {
-  .container {
-    max-width: 275px;
+  .header-list {
+    margin-top: 28px;
   }
-  .navbar-wrap {
-    padding: 17px 0;
+  .header-list__item {
+    margin-bottom: 20px;
   }
-  .navbar__contacts {
-    display: none;
+  .header-list__img {
+    margin-right: 15px;
   }
-  .navbar__button {
-    margin: 0;
-    padding: 15px 26px;
-    border-radius: 5px;
-    font-size: 10px;
+  .header-list__text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .header-img {
+    margin-top: 17px;
+    width: 100%;
   }
 }
